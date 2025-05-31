@@ -1,17 +1,176 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
-import ScrollText from './ScrollPhrases';
+// import ScrollText from './ScrollPhrases'; // Если нужен
 
+
+
+const data = [
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-1.jpeg`,
+    caption: "Наш первый день вместе"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-2.jpeg`,
+    caption: "Незабываемый вечер под звездами"
+  },
+  {
+    type: "video",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/video-1.mp4`,
+    caption: "Наш первый совместный отпуск"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-3.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "video",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/video-2.mp4`,
+    caption: "Самый счастливый день в моей жизни"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-4.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-5.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-6.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-7.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-8.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-9.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "video",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/video-3.mp4`,
+    caption: "Наш первый совместный отпуск"
+  },
+  {
+    type: "video",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/video-4.mp4`,
+    caption: "Наш первый совместный отпуск"
+  },
+  {
+    type: "video",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/video-5.mp4`,
+    caption: "Наш первый совместный отпуск"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-10.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-11.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-12.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-13.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-14.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "video",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/video-6.mp4`,
+    caption: "Наш первый совместный отпуск"
+  },
+  {
+    type: "video",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/video-7.mp4`,
+    caption: "Наш первый совместный отпуск"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-15.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-16.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-18.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "video",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/video-8.mp4`,
+    caption: "Наш первый совместный отпуск"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-19.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-20.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-21.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-22.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-23.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-24.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+  {
+    type: "photo",
+    src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-25.jpeg`,
+    caption: "В этот день ты сказала 'да'"
+  },
+];
 // Анимации
 const fadeIn = keyframes`
-   from { opacity: 0; transform: translateY(-30px); }
+  from { opacity: 0; transform: translateY(-30px); }
   to { opacity: 1; transform: translateY(0); }
-`;
-
-const photoEnter = keyframes`
-  from { opacity: 0; transform: scale(0.7) rotate(-5deg); }
-  to { opacity: 1; transform: scale(1) rotate(0deg); }
 `;
 
 const float = keyframes`
@@ -26,13 +185,14 @@ const heartPop = keyframes`
   100% { transform: scale(0); opacity: 0; }
 `;
 
-// Стили
+// Стили контейнера страницы
 const PageBackground = styled.div`
   background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
   min-height: 100vh;
   padding: 40px 20px;
 `;
 
+// Заголовок страницы
 const PageTitle = styled.h1`
   text-align: center;
   font-size: 42px;
@@ -40,12 +200,14 @@ const PageTitle = styled.h1`
   animation: ${fadeIn} 1s ease-out forwards;
   font-family: 'Playfair Display', serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
- margin-bottom: 50px;
+  margin-bottom: 50px;
+  
   span {
     color: #ffd700;
   }
 `;
 
+// Контейнер для сетки медиа (фото и видео)
 const CollageContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -54,6 +216,7 @@ const CollageContainer = styled.div`
   margin: 0 auto;
 `;
 
+// Карточка для отдельного медиа-объекта 
 const PhotoFrame = styled.div`
   position: relative;
   opacity: 0;
@@ -65,12 +228,13 @@ const PhotoFrame = styled.div`
   &:hover {
     z-index: 10;
 
-    img {
+    img, video {
       animation: ${float} 3s ease-in-out infinite;
     }
   }
 `;
 
+// Стили для фотографий
 const Photo = styled.img`
   width: 100%;
   height: 260px;
@@ -85,6 +249,22 @@ const Photo = styled.img`
   }
 `;
 
+// Стили для видео – внешний вид максимально схож с фотографиями
+const Video = styled.video`
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 5px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+`;
+
+// Подпись под медиа
 const Caption = styled.p`
   text-align: center;
   color: white;
@@ -100,6 +280,7 @@ const Caption = styled.p`
   }
 `;
 
+// Кнопка "лайк" для фотографий
 const LikeButton = styled.button`
   position: absolute;
   bottom: -10px;
@@ -123,6 +304,7 @@ const LikeButton = styled.button`
   }
 `;
 
+// Эффект сердечка
 const Heart = styled.div`
   position: absolute;
   color: red;
@@ -131,6 +313,7 @@ const Heart = styled.div`
   pointer-events: none;
 `;
 
+// Футер
 const Footer = styled.footer`
   text-align: center;
   color: white;
@@ -140,31 +323,22 @@ const Footer = styled.footer`
   padding: 20px;
 `;
 
-// Основной компонент
-const PhotoCollage = () => {
-  const [images, setImages] = useState([]);
+// Основной компонент медиагалереи
+const MediaCollage = () => {
+  const [media, setMedia] = useState([]);
   const [hearts, setHearts] = useState([]);
 
-  const captions = [
-    "Наш первый день вместе",
-    "Незабываемый вечер под звездами",
-    "Вместе на берегу моря",
-    "Наш первый совместный отпуск",
-    "В этот день ты сказала 'да'",
-    "Самый счастливый день в моей жизни"
-  ];
-
+  // Загружаем массив медиа после монтирования
   useEffect(() => {
     setTimeout(() => {
-      setImages([
-        '/gallery-imgs/photo-1.jpeg',
-        '/gallery-imgs/photo-2.jpeg',
-        '/gallery-imgs/photo-3.jpeg',
-      ]);
+      setMedia(data);
     }, 500);
   }, []);
 
+  // Обработка клика "лайка" (работает только для фото)
   const handleLike = (index, e) => {
+    if (media[index].type !== "photo") return; // лайки только для фото
+
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
@@ -187,31 +361,46 @@ const PhotoCollage = () => {
     <PageBackground>
       <PageTitle>The history of <span>our</span> love</PageTitle>
       <CollageContainer>
-        {images.map((src, index) => (
+        {media.map((item, index) => (
           <PhotoFrame key={index} delay={index * 0.15}>
-            <Photo
-              src={src}
-              alt={`Фото ${index + 1}`}
-              style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
-            />
-            <Caption>{captions[index % captions.length]}</Caption>
-            <LikeButton onClick={(e) => handleLike(index, e)}>
-              ❤️
-              {hearts
-                .filter(h => h.index === index)
-                .map(h => (
-                  <Heart
-                    key={h.id}
-                    style={{ left: `${h.x}px`, top: `${h.y}px` }}
-                  >❤️</Heart>
-                ))}
-            </LikeButton>
+            {item.type === "photo" ? (
+              <>
+                <Photo
+                  src={item.src}
+                  alt={`Фото ${index + 1}`}
+                  style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
+                />
+                <Caption>{item.caption}</Caption>
+                <LikeButton onClick={(e) => handleLike(index, e)}>
+                  ❤️
+                  {hearts
+                    .filter(h => h.index === index)
+                    .map(h => (
+                      <Heart
+                        key={h.id}
+                        style={{ left: `${h.x}px`, top: `${h.y}px` }}
+                      >❤️</Heart>
+                    ))}
+                </LikeButton>
+              </>
+            ) : item.type === "video" ? (
+              <>
+                <Video
+                  controls
+                  src={item.src}
+                  style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
+                />
+                <Caption>{item.caption}</Caption>
+              </>
+            ) : null}
           </PhotoFrame>
         ))}
       </CollageContainer>
-      {/* <ScrollText/> */}
+      <Footer>
+        &copy; {new Date().getFullYear()} Our Love Story. All rights reserved.
+      </Footer>
     </PageBackground>
   );
 };
 
-export default PhotoCollage;
+export default MediaCollage;

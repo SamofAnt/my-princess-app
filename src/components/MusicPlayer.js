@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const AudioButton = styled.button`
@@ -19,42 +19,47 @@ const AudioButton = styled.button`
 `;
 
 const tracks = [
-  "/music/Stan.mp3"
+    `${process.env.PUBLIC_URL}/music/Stan.mp3`,
 ];
 
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  const audio = new Audio(tracks[currentTrackIndex]);
+  // Создаем объект аудио один раз
+  const audioRef = useRef(new Audio(tracks[0]));
 
   useEffect(() => {
-    audio.loop = false; // Отключаем повтор одного трека
-    audio.addEventListener("ended", () => {
-      setCurrentTrackIndex((prevIndex) => (prevIndex + 1) % tracks.length);
-    });
+    const audio = audioRef.current;
+    // Отключаем зацикливание отдельного трека, чтобы переключать между треками
+    audio.loop = false;
+    
+    // Обработчик события окончания трека
+    const handleEnded = () => {
+      setCurrentTrackIndex(prevIndex => (prevIndex + 1) % tracks.length);
+    };
 
+    audio.addEventListener("ended", handleEnded);
     return () => {
-      audio.removeEventListener("ended", () => {});
+      audio.removeEventListener("ended", handleEnded);
       audio.pause();
     };
-  }, [currentTrackIndex]);
+  }, []);
 
   useEffect(() => {
+    const audio = audioRef.current;
+    // Обновляем источник аудио при смене трека
     audio.src = tracks[currentTrackIndex];
     if (playing) {
       audio.play();
     }
-  }, [currentTrackIndex]);
+  }, [currentTrackIndex, playing]);
 
   const toggleMusic = () => {
+    const audio = audioRef.current;
     if (playing) {
-      setTimeout(() => {
-        audio.volume = 0; 
-        setTimeout(() => audio.pause(), 500);
-      }, 100);
+      audio.pause();
     } else {
       audio.play();
-      audio.volume = 1;
     }
     setPlaying(!playing);
   };

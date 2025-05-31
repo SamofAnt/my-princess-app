@@ -100,9 +100,12 @@ const Button = styled.button`
 `;
 
 const images = [
-  '/comic/comic-3.png',
-  '/comic/comic-1.jpeg',
-  '/comic/comic-2.png',
+  `${process.env.PUBLIC_URL}/comic/comic-3.png`,
+  `${process.env.PUBLIC_URL}/comic/comic-1.jpeg`,
+  `${process.env.PUBLIC_URL}/comic/comic-2.png`,
+  `${process.env.PUBLIC_URL}/comic/comic-4.png`,
+  `${process.env.PUBLIC_URL}/comic/comic-5.png`,
+  
 ];
 
 const Comic = () => {
