@@ -9,17 +9,18 @@ const ComicContainer = styled.div`
   justify-content: center;
   height: 100vh;
   padding: 20px;
+  margin-top: 40px;
 
 `;
 
 const ComicImage = styled.img`
-  width: 70%;
+  width: 50%;
   max-height: 80vh;
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
-  z-index: 10000;
+  z-index: 100;
   &:hover {
     transform: scale(1.05);
   }
@@ -99,6 +100,7 @@ const Button = styled.button`
 `;
 
 const images = [
+  '/comic/comic-3.png',
   '/comic/comic-1.jpeg',
   '/comic/comic-2.png',
 ];

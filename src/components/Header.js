@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
-
+import MusicPlayer from './MusicPlayer';
 const Navbar = styled.nav`
   position: fixed;
   width: 100%;
@@ -39,7 +39,9 @@ const Header = () => {
       <StyledLink to="/collage" active={location.pathname === "/collage"}>Gallery</StyledLink>
       <StyledLink to="/comic" active={location.pathname === "/comic"}>Comic</StyledLink>
       <StyledLink to="/timeline" active={location.pathname === "/timeline"}>Time Line</StyledLink>
-      
+
+      <StyledLink to="/love-messages" active={location.pathname === "/love-messages"}>My feelings</StyledLink>
+      <MusicPlayer />
     </Navbar>
   );
 };

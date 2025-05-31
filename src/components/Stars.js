@@ -3,12 +3,11 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 const StarsContainer = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: black;
   overflow: hidden;
-  
 `;
 
 const Star = styled(motion.div)`
@@ -17,6 +16,26 @@ const Star = styled(motion.div)`
   height: 3px;
   background: white;
   border-radius: 50%;
+`;
+
+const floating = {
+  y: [0, 15, 0], // Луна плавно двигается вверх-вниз
+  transition: {
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut"
+  }
+};
+
+const Moon = styled(motion.div)`
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #ffffff 30%, #cccccc 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
 `;
 
 const generateStars = () => {
@@ -37,6 +56,7 @@ const Stars = () => {
 
   return (
     <StarsContainer>
+      <Moon animate={floating} />
       {stars.map((star) => (
         <Star
           key={star.id}

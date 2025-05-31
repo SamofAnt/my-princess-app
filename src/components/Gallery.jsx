@@ -209,7 +209,7 @@ const PhotoCollage = () => {
           </PhotoFrame>
         ))}
       </CollageContainer>
-      <ScrollText/>
+      {/* <ScrollText/> */}
     </PageBackground>
   );
 };

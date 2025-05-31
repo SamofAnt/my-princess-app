@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const fadeInUp = keyframes`
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 `;
 
-const fadeOut = keyframes`
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+const fadeOutDown = keyframes`
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(30px); }
 `;
 
 const TextContainer = styled.div`
@@ -24,14 +24,9 @@ const Phrase = styled.div`
   font-size: 24px;
   color: white;
   text-align: center;
+  margin: 100px 0;
   opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  animation: ${fadeInUp} 1s forwards;
-  margin: 20px 0;
-
-  &.hidden {
-    animation: ${fadeOut} 1s forwards;
-  }
+  animation: ${({ isVisible }) => (isVisible ? fadeInUp : fadeOutDown)} 1s forwards;
 `;
 
 const LovePhrase = styled.h1`
@@ -39,7 +34,7 @@ const LovePhrase = styled.h1`
   font-weight: bold;
   color: pink;
   opacity: 0;
-  animation: ${fadeInUp} 1.5s forwards;
+  animation: ${fadeInUp} 2s forwards;
   text-shadow: 0px 4px 10px rgba(255, 105, 180, 0.5);
   padding-top: 50px;
 `;
@@ -52,33 +47,37 @@ const phrases = [
 ];
 
 const ScrollText = () => {
-  const [visibleIndex, setVisibleIndex] = useState(0);
+  const [visible, setVisible] = useState([]);
+  const refs = useRef([]);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const threshold = document.documentElement.scrollHeight * 0.7;
-
-      if (scrollPosition > threshold) {
-        setVisibleIndex(phrases.length);
-      } else {
-        const index = Math.floor(scrollPosition / 300) % phrases.length;
-        setVisibleIndex(index);
-      }
+      const newVisible = refs.current.map((ref) => {
+        if (!ref) return false;
+        const rect = ref.getBoundingClientRect();
+        return rect.top >= 0 && rect.top <= window.innerHeight * 0.7;
+      });
+      setVisible(newVisible);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initial check
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <TextContainer>
       {phrases.map((text, index) => (
-        <Phrase key={index} className={index === visibleIndex ? "" : "hidden"}>
+        <Phrase
+          key={index}
+          ref={(el) => (refs.current[index] = el)}
+          isVisible={visible[index]}
+        >
           {text}
         </Phrase>
       ))}
-      {visibleIndex === phrases.length && <LovePhrase>Я люблю тебя ❤️</LovePhrase>}
+      {visible.every(v => v) && <LovePhrase>Я люблю тебя ❤️</LovePhrase>}
     </TextContainer>
   );
 };
