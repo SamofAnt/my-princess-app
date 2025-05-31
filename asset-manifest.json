@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a5e1ffa2.css",
-    "main.js": "/static/js/main.f9ffa566.js",
-    "static/js/453.17770287.chunk.js": "/static/js/453.17770287.chunk.js",
-    "index.html": "/index.html",
-    "main.a5e1ffa2.css.map": "/static/css/main.a5e1ffa2.css.map",
-    "main.f9ffa566.js.map": "/static/js/main.f9ffa566.js.map",
-    "453.17770287.chunk.js.map": "/static/js/453.17770287.chunk.js.map"
+    "main.css": "/my-princess-app/static/css/main.a5e1ffa2.css",
+    "main.js": "/my-princess-app/static/js/main.af40321b.js",
+    "static/js/453.17770287.chunk.js": "/my-princess-app/static/js/453.17770287.chunk.js",
+    "index.html": "/my-princess-app/index.html",
+    "main.a5e1ffa2.css.map": "/my-princess-app/static/css/main.a5e1ffa2.css.map",
+    "main.af40321b.js.map": "/my-princess-app/static/js/main.af40321b.js.map",
+    "453.17770287.chunk.js.map": "/my-princess-app/static/js/453.17770287.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5e1ffa2.css",
-    "static/js/main.f9ffa566.js"
+    "static/js/main.af40321b.js"
   ]
 }
