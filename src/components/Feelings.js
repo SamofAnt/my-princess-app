@@ -105,6 +105,7 @@ const FeelingsPage = () => {
           <p>
           Thank you for being you. You fill my life with richness, beauty, and meaning.I dream of our days together — every moment, every smile — and I can't wait to live them all with you.
           </p>
+          <p>I Love You 💖</p>
         </Content>
       </Card>
     </PageContainer>
