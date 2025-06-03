@@ -9,162 +9,162 @@ const data = [
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-1.jpeg`,
-    caption: "Наш первый день вместе"
+    caption: "The glasses suit you very well"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-2.jpeg`,
-    caption: "Незабываемый вечер под звездами"
+    caption: "You made me happy with your arrival"
   },
   {
     type: "video",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/video-1.mp4`,
-    caption: "Наш первый совместный отпуск"
+    caption: "I will never forget this Halloween"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-3.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "It's an unforgettable feeling to feel your lips"
   },
   {
     type: "video",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/video-2.mp4`,
-    caption: "Самый счастливый день в моей жизни"
+    caption: "I love your smile"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-4.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "You were insanely beautiful that day"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-5.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "I was very nervous"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-6.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "I fell in love"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-7.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "I love your photos"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-8.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "We should go to wonderland again!"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-9.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "We are very cute"
   },
   {
     type: "video",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/video-3.mp4`,
-    caption: "Наш первый совместный отпуск"
+    caption: "YOUR SMILE IS AMAZING"
   },
   {
     type: "video",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/video-4.mp4`,
-    caption: "Наш первый совместный отпуск"
+    caption: "Oh... you don't love me like I"
   },
   {
     type: "video",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/video-5.mp4`,
-    caption: "Наш первый совместный отпуск"
+    caption: "Your eyes are amazing"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-10.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "I want to kiss you every day"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-11.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "You are very cute here"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-12.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "It was a very beautiful place that you showed me"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-13.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "I am incredibly lucky"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-14.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "😛"
   },
   {
     type: "video",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/video-6.mp4`,
-    caption: "Наш первый совместный отпуск"
+    caption: "I love our nights at the movies"
   },
   {
     type: "video",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/video-7.mp4`,
-    caption: "Наш первый совместный отпуск"
+    caption: "This was a really cool idea (YOURS)"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-15.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "YOU ARE CRAZY BEAUTIFUL"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-16.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "YOU ARE CRAZY BEAUTIFUL"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-18.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "Our one of the best photos"
   },
   {
     type: "video",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/video-8.mp4`,
-    caption: "Наш первый совместный отпуск"
+    caption: "You play better every time!"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-19.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "This is a very sexy photo"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-20.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "I want to spend more nights like this with you."
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-21.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "This is cute"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-22.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "LAY DOWN ON ME MORE"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-23.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "Did you know that you were very beautiful?"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-24.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "MWAH"
   },
   {
     type: "photo",
     src: `${process.env.PUBLIC_URL}/gallery-imgs/photo-25.jpeg`,
-    caption: "В этот день ты сказала 'да'"
+    caption: "YOU ARE VERY COMFORTABLE"
   },
 ];
 // Анимации
@@ -224,10 +224,9 @@ const PhotoFrame = styled.div`
   animation: ${fadeIn} 0.8s ease forwards;
   animation-delay: ${({ delay }) => delay}s;
   transform-origin: center;
-
+  
   &:hover {
     z-index: 10;
-
     img, video {
       animation: ${float} 3s ease-in-out infinite;
     }
@@ -243,6 +242,7 @@ const Photo = styled.img`
   border: 5px solid white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.4s ease;
+  cursor: pointer; /* курсор-указатель для интерактивности */
 
   &:hover {
     transform: scale(1.08);
@@ -323,10 +323,45 @@ const Footer = styled.footer`
   padding: 20px;
 `;
 
-// Основной компонент медиагалереи
+// Модальное оверлей-окно для полноэкранного просмотра фотографии
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+`;
+
+// Модальное окно для изображения
+const ModalImage = styled.img`
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+`;
+
+// Кнопка закрытия модального окна
+const CloseButton = styled.button`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+`;
+
 const MediaCollage = () => {
   const [media, setMedia] = useState([]);
   const [hearts, setHearts] = useState([]);
+  const [selectedPhoto, setSelectedPhoto] = useState(null); // Стейт для выбранной фотографии
 
   // Загружаем массив медиа после монтирования
   useEffect(() => {
@@ -357,49 +392,74 @@ const MediaCollage = () => {
     }, 1000);
   };
 
+  // Обработка клика по фотографии для открытия модального окна
+  const openModal = (item) => {
+    if (item.type === "photo") {
+      setSelectedPhoto(item);
+    }
+  };
+
+  // Закрытие модального окна
+  const closeModal = () => {
+    setSelectedPhoto(null);
+  };
+
   return (
-    <PageBackground>
-      <PageTitle>The history of <span>our</span> love</PageTitle>
-      <CollageContainer>
-        {media.map((item, index) => (
-          <PhotoFrame key={index} delay={index * 0.15}>
-            {item.type === "photo" ? (
-              <>
-                <Photo
-                  src={item.src}
-                  alt={`Фото ${index + 1}`}
-                  style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
-                />
-                <Caption>{item.caption}</Caption>
-                <LikeButton onClick={(e) => handleLike(index, e)}>
-                  ❤️
-                  {hearts
-                    .filter(h => h.index === index)
-                    .map(h => (
-                      <Heart
-                        key={h.id}
-                        style={{ left: `${h.x}px`, top: `${h.y}px` }}
-                      >❤️</Heart>
-                    ))}
-                </LikeButton>
-              </>
-            ) : item.type === "video" ? (
-              <>
-                <Video
-                  controls
-                  src={item.src}
-                  style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
-                />
-                <Caption>{item.caption}</Caption>
-              </>
-            ) : null}
-          </PhotoFrame>
-        ))}
-      </CollageContainer>
-      <Footer>
-        &copy; {new Date().getFullYear()} Our Love Story. All rights reserved.
-      </Footer>
-    </PageBackground>
+    <>
+      <PageBackground>
+        <PageTitle>The history of <span>our</span> love</PageTitle>
+        <CollageContainer>
+          {media.map((item, index) => (
+            <PhotoFrame key={index} delay={index * 0.15}>
+              {item.type === "photo" ? (
+                <>
+                  <Photo
+                    src={item.src}
+                    alt={`Фото ${index + 1}`}
+                    style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
+                    onClick={() => openModal(item)}
+                  />
+                  <Caption>{item.caption}</Caption>
+                  <LikeButton onClick={(e) => handleLike(index, e)}>
+                    ❤️
+                    {hearts
+                      .filter(h => h.index === index)
+                      .map(h => (
+                        <Heart
+                          key={h.id}
+                          style={{ left: `${h.x}px`, top: `${h.y}px` }}
+                        >❤️</Heart>
+                      ))}
+                  </LikeButton>
+                </>
+              ) : item.type === "video" ? (
+                <>
+                  <Video
+                    controls
+                    src={item.src}
+                    style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
+                  />
+                  <Caption>{item.caption}</Caption>
+                </>
+              ) : null}
+            </PhotoFrame>
+          ))}
+        </CollageContainer>
+        <Footer>
+          &copy; {new Date().getFullYear()} Our Love Story. All rights reserved.
+        </Footer>
+      </PageBackground>
+      
+      {/* Модальное окно для полноэкранного отображения фотографии */}
+      {selectedPhoto && (
+        <ModalOverlay onClick={closeModal}>
+          <CloseButton onClick={(e) => { e.stopPropagation(); closeModal(); }}>
+            &times;
+          </CloseButton>
+          <ModalImage src={selectedPhoto.src} alt="Полноэкранное фото" onClick={(e) => e.stopPropagation()} />
+        </ModalOverlay>
+      )}
+    </>
   );
 };
 
