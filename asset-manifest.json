@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/my-princess-app/static/css/main.a5e1ffa2.css",
-    "main.js": "/my-princess-app/static/js/main.62eef338.js",
-    "static/js/453.17770287.chunk.js": "/my-princess-app/static/js/453.17770287.chunk.js",
-    "index.html": "/my-princess-app/index.html",
-    "main.a5e1ffa2.css.map": "/my-princess-app/static/css/main.a5e1ffa2.css.map",
-    "main.62eef338.js.map": "/my-princess-app/static/js/main.62eef338.js.map",
-    "453.17770287.chunk.js.map": "/my-princess-app/static/js/453.17770287.chunk.js.map"
+    "main.css": "/my-princess-app/home/static/css/main.a5e1ffa2.css",
+    "main.js": "/my-princess-app/home/static/js/main.b981dacc.js",
+    "static/js/453.17770287.chunk.js": "/my-princess-app/home/static/js/453.17770287.chunk.js",
+    "index.html": "/my-princess-app/home/index.html",
+    "main.a5e1ffa2.css.map": "/my-princess-app/home/static/css/main.a5e1ffa2.css.map",
+    "main.b981dacc.js.map": "/my-princess-app/home/static/js/main.b981dacc.js.map",
+    "453.17770287.chunk.js.map": "/my-princess-app/home/static/js/453.17770287.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5e1ffa2.css",
-    "static/js/main.62eef338.js"
+    "static/js/main.b981dacc.js"
   ]
 }
