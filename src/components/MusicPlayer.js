@@ -19,49 +19,34 @@ const AudioButton = styled.button`
 `;
 
 const tracks = [
-    `${process.env.PUBLIC_URL}/music/Stan.mp3`,
+  `${process.env.PUBLIC_URL}/music/Stan.mp3`,
 ];
 
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  // Создаем объект аудио один раз
   const audioRef = useRef(new Audio(tracks[0]));
 
   useEffect(() => {
     const audio = audioRef.current;
-    // Отключаем зацикливание отдельного трека, чтобы переключать между треками
-    audio.loop = false;
-    
-    // Обработчик события окончания трека
-    const handleEnded = () => {
-      setCurrentTrackIndex(prevIndex => (prevIndex + 1) % tracks.length);
-    };
+    // Включаем зацикливание трека
+    audio.loop = true;
 
-    audio.addEventListener("ended", handleEnded);
     return () => {
-      audio.removeEventListener("ended", handleEnded);
       audio.pause();
     };
   }, []);
 
   useEffect(() => {
     const audio = audioRef.current;
-    // Обновляем источник аудио при смене трека
-    audio.src = tracks[currentTrackIndex];
     if (playing) {
-      audio.play();
+      audio.play().catch(err => console.log("Error playing audio:", err));
+    } else {
+      audio.pause();
     }
-  }, [currentTrackIndex, playing]);
+  }, [playing]);
 
   const toggleMusic = () => {
-    const audio = audioRef.current;
-    if (playing) {
-      audio.pause();
-    } else {
-      audio.play();
-    }
-    setPlaying(!playing);
+    setPlaying(prev => !prev);
   };
 
   return (
