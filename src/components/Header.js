@@ -90,7 +90,7 @@ const Header = () => {
       <NavLinksContainer open={menuOpen}>
         <StyledLink 
           to="/" 
-          active={location.pathname === "/home"} 
+          active={location.pathname === "/"} 
           onClick={() => setMenuOpen(false)}
         >
           Home

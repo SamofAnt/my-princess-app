@@ -15,7 +15,7 @@ function App() {
       <Stars />
    
       <Routes>
-      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Home />} />
         <Route path="/collage" element={<Gallery />} />
         <Route path="/comic" element={<Comic />} />
         <Route path="/timeline" element={<Timeline />} />
