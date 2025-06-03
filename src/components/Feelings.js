@@ -91,19 +91,19 @@ const FeelingsPage = () => {
         <Title>About My Feelings</Title>
         <Content>
           <p>
-          Since the moment you stepped into my life, every second has been filled with magic. Your words, your gaze, your smile — they make my heart race, like the soft chime of bells in the morning sunlight.
+          Since the moment you stepped into my life, every second has been filled with magic. Your words, your voice, your smile — they make my heart race.
           </p>
           <p>
-          Each day I wake up with thoughts of you and a hope that today will bring us even more cherished memories. In my world, there is nothing more beautiful than your smile and your tenderness.
+          Each day I wake up with thoughts of you and a hope that today will bring us even more cherished memories. You changed me for the better and i am grateful to you for that.
           </p>
           <blockquote>
             "Love is not just a feeling. Love is art and science, magic and reality, a dream and destiny."
           </blockquote>
           <p>
-          Let these lines reflect the depths of my soul, and may every word remind you of how much you mean to me. Our love is my inspiration, my brightest light, even in the darkest of times.
+          Since the day you asked me to hang out, so much has changed — our bond has grown deeper and stronger. I want everything you see now to be a reminder of how much you truly mean to me.
           </p>
           <p>
-          Thank you for being you. You fill my life with richness, beauty, and meaning. I dream of our days together — of every moment we share — and I believe our story will last forever.
+          Thank you for being you. You fill my life with richness, beauty, and meaning.I dream of our days together — every moment, every smile — and I can't wait to live them all with you.
           </p>
         </Content>
       </Card>
