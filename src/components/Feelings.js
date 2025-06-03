@@ -88,22 +88,22 @@ const FeelingsPage = () => {
   return (
     <PageContainer>
       <Card>
-        <Title>О моих чувствах</Title>
+        <Title>About My Feelings</Title>
         <Content>
           <p>
-            С тех пор как ты вошла в мою жизнь, каждый миг наполнен магией. Твои слова, взгляд и улыбка заставляют мое сердце биться быстрее, словно звон колокольчиков в лучах утреннего солнца.
+          Since the moment you stepped into my life, every second has been filled with magic. Your words, your gaze, your smile — they make my heart race, like the soft chime of bells in the morning sunlight.
           </p>
           <p>
-            Каждое утро я просыпаюсь с мыслями о тебе и с надеждой, что сегодняшний день принесет нам ещё больше воспоминаний. В моем мире нет ничего прекраснее, чем твоя улыбка и твоя нежность.
+          Each day I wake up with thoughts of you and a hope that today will bring us even more cherished memories. In my world, there is nothing more beautiful than your smile and your tenderness.
           </p>
           <blockquote>
-            "Любовь — это не просто чувства. Любовь — это искусство и наука, волшебство и реальность, мечта и судьба."
+            "Love is not just a feeling. Love is art and science, magic and reality, a dream and destiny."
           </blockquote>
           <p>
-            Пусть эти строки отражают глубину моей души и каждое слово будет напоминать тебе о том, насколько ты важна для меня. Наша любовь — мое вдохновение и мой самый яркий свет даже среди самых темных времен.
+          Let these lines reflect the depths of my soul, and may every word remind you of how much you mean to me. Our love is my inspiration, my brightest light, even in the darkest of times.
           </p>
           <p>
-            Спасибо тебе за то, что ты есть. Ты делаешь мою жизнь насыщенной, полной и прекрасной. Я мечтаю о наших общих днях, о каждом мигновении, проведенном вместе, и верю, что наша история будет длиться вечно.
+          Thank you for being you. You fill my life with richness, beauty, and meaning. I dream of our days together — of every moment we share — and I believe our story will last forever.
           </p>
         </Content>
       </Card>
