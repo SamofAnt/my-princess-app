@@ -1,6 +1,6 @@
 {
   "name": "my-princess-app",
-  "homepage": "https://samofant.github.io/my-princess-app/home",
+  "homepage": "https://samofant.github.io/my-princess-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
