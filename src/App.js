@@ -6,7 +6,7 @@ import Stars from './components/Stars';
 import Gallery from './components/Gallery';
 import Comic from './components/Comic';
 import Timeline from './components/TimeLine';
-import LoveMessages from './components/LoveMessages';
+import FeelingsPage from './components/Feelings';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/collage" element={<Gallery />} />
         <Route path="/comic" element={<Comic />} />
         <Route path="/timeline" element={<Timeline />} />
-        <Route path="/love-messages" element={<LoveMessages />} />
+        <Route path="/feelings" element={<FeelingsPage />} />
       </Routes>
     </Router>
   );

@@ -117,8 +117,8 @@ const Header = () => {
           Time Line
         </StyledLink>
         <StyledLink 
-          to="/love-messages" 
-          active={location.pathname === "/love-messages"}
+          to="/feelings" 
+          active={location.pathname === "/feelings"}
           onClick={() => setMenuOpen(false)}
         >
           My feelings
